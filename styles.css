@@ -203,7 +203,7 @@ p {
 
 .hero,
 .page-hero {
-  padding: 72px 0;
+  padding: 44px 0 30px;
 }
 
 .hero-grid {
@@ -294,7 +294,7 @@ h2 {
 
 .punch-row {
   grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 78px;
+  padding-bottom: 30px;
 }
 
 .punch,
@@ -345,7 +345,11 @@ h2 {
 }
 
 .section {
-  padding: 82px 0;
+  padding: 42px 0;
+}
+
+.page-hero + .section {
+  padding-top: 24px;
 }
 
 .section.tinted {
@@ -422,8 +426,15 @@ h2 {
 }
 
 .use-grid h2 {
-  margin-top: 18px;
   font-size: 1.55rem;
+}
+
+.clean-use-grid article {
+  padding-top: 30px;
+}
+
+.clean-use-grid h2 {
+  margin-top: 0;
 }
 
 .wedding-images {
@@ -511,7 +522,10 @@ h2 {
 .shop-patch {
   width: min(360px, 100%);
   margin: 0 auto;
-  background: #111;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .faq-list {
@@ -687,5 +701,23 @@ h2 {
 
   h1 {
     font-size: clamp(2.25rem, 11vw, 3.9rem);
+  }
+
+  .hero,
+  .page-hero,
+  .section {
+    padding: 32px 0;
+  }
+
+  .page-hero {
+    padding-bottom: 18px;
+  }
+
+  .page-hero + .section {
+    padding-top: 16px;
+  }
+
+  .punch-row {
+    padding-bottom: 24px;
   }
 }
