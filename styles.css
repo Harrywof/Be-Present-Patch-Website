@@ -536,19 +536,25 @@ h2 {
 
 
 .how-photo-section {
-  padding-top: 20px;
+  padding: 34px 0 42px;
 }
 
 .how-photo-layout {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 32px;
+  grid-template-columns: minmax(300px, 420px) minmax(0, 690px);
+  justify-content: center;
+  gap: 42px;
   align-items: center;
+}
+
+.how-photo-layout > div:first-child {
+  max-width: 420px;
 }
 
 .how-photo-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 320px));
+  justify-content: end;
   gap: 18px;
 }
 
@@ -556,23 +562,26 @@ h2 {
   overflow: hidden;
   margin: 0;
   border: 2px solid #111;
-  border-radius: 18px;
+  border-radius: 16px;
   background: var(--paper);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .how-photo-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1.18;
   object-fit: cover;
   object-position: center;
 }
 
 .how-photo-card figcaption {
+  min-height: 78px;
   border-top: 2px solid #111;
-  padding: 14px 16px;
+  padding: 15px 16px;
   color: #111;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1.45;
 }
 .site-footer {
   border-top: 2px solid #111;
