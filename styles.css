@@ -348,6 +348,50 @@ h2 {
 .section {
   padding: 42px 0;
 }
+.designs-section {
+  padding-top: 28px;
+}
+
+.design-heading {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.design-heading p:not(.kicker) {
+  max-width: 680px;
+}
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.design-card {
+  overflow: hidden;
+  margin: 0;
+  border: 2px solid #111;
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: none;
+}
+
+.design-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+}
+
+.design-card figcaption {
+  min-height: 74px;
+  border-top: 2px solid #111;
+  padding: 13px 14px;
+  color: #111;
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
 
 .page-hero + .section {
   padding-top: 24px;
@@ -638,6 +682,10 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-photo img {
     height: auto;
     min-height: 0;
@@ -737,6 +785,7 @@ h2 {
   .use-grid,
   .stat-grid,
   .research-grid,
+  .design-grid,
   .wedding-images {
     grid-template-columns: 1fr;
   }
