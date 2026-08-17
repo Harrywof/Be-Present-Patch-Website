@@ -769,11 +769,13 @@ h2 {
   background: var(--paper);
   box-shadow: var(--shadow);
   transform: rotate(1deg);
+  width: min(100%, 390px);
+  justify-self: end;
 }
 
 .custom-hero-photo img {
   width: 100%;
-  height: 520px;
+  height: 460px;
   object-fit: cover;
 }
 
@@ -864,8 +866,7 @@ h2 {
   .hero-grid,
   .split,
   .wedding-layout,
-  .shop-hero,
-  .custom-hero-grid {
+  .shop-hero {
     grid-template-columns: 1fr;
   }
 
@@ -883,25 +884,24 @@ h2 {
   }
 
   .hero-carousel {
-  position: relative;
-  height: min(68vh, 680px);
-  min-height: 520px;
-  background: #dedede;
-  transform: none;
-}
+    height: 540px;
+    min-height: 540px;
+  }
 
   .hero-carousel img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  padding: 10px;
-  object-fit: contain;
-  object-position: center;
-  opacity: 0;
-  transition: opacity 600ms ease;
+    height: 100%;
+  }
 }
+
+@media (max-width: 860px) {
+  .custom-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+    gap: 28px;
+  }
+
+  .custom-hero-photo img {
+    height: 420px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -911,6 +911,16 @@ h2 {
 
   .product-lineup .design-card img {
     height: 300px;
+  }
+
+  .custom-hero-grid,
+  .how-photo-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-hero-photo {
+    max-width: 420px;
+    margin: 0 auto;
   }
 }
 
@@ -1009,20 +1019,18 @@ h2 {
   .research-grid,
   .design-grid,
   .custom-feature-grid,
-  .wedding-images {
+  .wedding-images,
+  .how-photo-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-carousel {
-  position: relative;
-  height: min(68vh, 680px);
-  min-height: 520px;
-  background: #dedede;
-  transform: none;
-}
+    height: 430px;
+    min-height: 430px;
+  }
 
   .product-lineup .design-card img {
-    height: 300px;
+    height: 360px;
   }
 
   .contact-panel {
@@ -1036,26 +1044,10 @@ h2 {
   }
 
   .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 2;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #111;
-  border-radius: 50%;
-  padding: 0 0 3px;
-  background: rgba(255, 255, 255, 0.88);
-  color: #111;
-  font-size: 2rem;
-  font-weight: 950;
-  line-height: 1;
-  transform: translateY(-50%);
-  box-shadow: 3px 3px 0 #111;
-  cursor: pointer;
-}
+    width: 38px;
+    height: 38px;
+    font-size: 1.65rem;
+  }
 
   .actions,
   .footer-inner {
@@ -1087,18 +1079,6 @@ h2 {
 
   .punch-row {
     padding-bottom: 24px;
-  }
-}
-
-@media (max-width: 760px) {
-  .how-photo-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 680px) {
-  .how-photo-grid {
-    grid-template-columns: 1fr;
   }
 
   .how-photo-card img {
